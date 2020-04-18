@@ -1,0 +1,32 @@
+{
+  "name": "gitpod-heroku-install",
+  "version": "1.0.0",
+  "description": "Welcome rdfsouza,",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Code-Institute-Org/gitpod-heroku-install.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Code-Institute-Org/gitpod-heroku-install/issues"
+  },
+  "homepage": "https://github.com/Code-Institute-Org/gitpod-heroku-install#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "mongodb": "^3.5.6",
+    "mongose": "0.0.2-security",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "xml2js": "^0.4.23",
+    "xslt-processor": "^0.11.5"
+  }
+}
