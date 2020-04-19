@@ -5,6 +5,7 @@ const app = express()
 const morgan = require ('morgan')
 const bodyParser = require('body-parser')
 
+app.use(express.static('views'))
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(require('./routes/routes.js'));
