@@ -6,18 +6,6 @@ and changed his code for what i needed.
 https://www.w3schools.com/ - Most used to get CSS 
 My Own codes from previus assigments
 -->
-<script>
-	function myFunction() {
-  var txt;
-  var person = prompt("Please enter the email you want to send your ticket:", "Someone@gmail.com");
-}
-</script>
-
-<script>
-	function myFunction1() {
-  alert("Your table was update sucessfully");
-}
-</script>
 
 <head>
 	<img class="Logo" src="images/Logo.jpg" width="1350" height="350>
@@ -28,9 +16,9 @@ My Own codes from previus assigments
 
 	<title>Easy Tikets</title>
 
-
 	<link href="css/TicketApp.css" rel="stylesheet">
 </head>
+
 
 <body background="images/Background.jpg">
 
@@ -46,77 +34,65 @@ My Own codes from previus assigments
 
 	<h2 class="mt-5" align="center">Welcome to EasyTickets</h2>
 
-
-
-        <table id='table'>
-        <thead>
-                        <tr>
-                            <th colspan="5">Concerts</th>
-                        </tr>
-                        <tr>
-                            <th>ID</th>
-		                	<th>Concert</th>
-                            <th>Type</th>
-                            <th>Tickets Avaliable</th>
-                             <th>Price €</th>
-                       </tr>
-                    </thead>
-          <tbody id='tbody'>
-        </tbody>
-        </table>      
-<form id='form' action="Update" >
-                            <th><input class="form-control" type="text" id="id" placeholder="id"/></th>
-                            <th><input class="form-control" type="text" id="name" placeholder="name"/></th>
-                            <th><input class="form-control" type="text" id="type" placeholder="Types"/></th>
-                            <th><input class="form-control" type="text" id="avaliables" placeholder="TicketsAvaliable"/></th>
-                            <th><input class="form-control" type='number' id="price" placeholder="Price"/></th>
-                      
-					 <input type="button" value="Update" onclick="UPDATE()">
-                     <input type="button" value="Delete" onclick="DELETE()">
+	<table id='table'>
+		<thead>
+			<tr>
+				<th colspan="5">Concerts</th>
+			</tr>
+			<tr>
+				<th>ID</th>
+				<th>Concert</th>
+				<th>Type</th>
+				<th>Tickets Avaliable</th>
+				<th>Price €</th>
+			</tr>
+		</thead>
+		<tbody id='tbody'>
+		</tbody>
+	</table>
+	<form id='form' action="Update">
+		<th><input class="form-control" type="text" id="id" placeholder="id"/></th>
+		<th><input class="form-control" type="text" id="name" placeholder="name"/></th>
+		<th><input class="form-control" type="text" id="type" placeholder="Types"/></th>
+		<th><input class="form-control" type="text" id="avaliables" placeholder="TicketsAvaliable"/></th>
+		<th><input class="form-control" type='number' id="price" placeholder="Price"/></th>
+           <p> <input type="button" value="Submit" onclick="POST()">
+			<input type="button" value="Update" onclick="UPDATE()">
+			<input type="button" value="Delete" onclick="DELETE()"></p>
 </form>
-<form id='form' action="POST()" >
-
-                            <th><input class="form-control" type="text" id="name" placeholder="name"/></th>
-                            <th><input class="form-control" type="text" id="type" placeholder="Types"/></th>
-                            <th><input class="form-control" type="text" id="avaliables" placeholder="TicketsAvaliable"/></th>
-                            <th><input class="form-control" type='number' id="price" placeholder="Price"/></th>
-                      
-					 <input type="button" value="Submit" onclick="POST()">
-</form>
-		<ul>
-			<img src = "images/Kiss-2020_v1_Interna.jpg" width="300" height="250">
-			<img src = "images/220px-Harry_Styles_Live_On_Tour.jpg" width="300" height="250">
-			<img src = "images/Pôster_de_Reputation_Stadium_Tour.png" width="300" height="250">
+		
+			<ul>
+				<img src = "images/Kiss-2020_v1_Interna.jpg" width="300" height="250">
+				<img src = "images/220px-Harry_Styles_Live_On_Tour.jpg" width="300" height="250">
+				<img src = "images/Pôster_de_Reputation_Stadium_Tour.png" width="300" height="250">
 
 </ul>
-	</div>
 
-	<div class="Social" align="center">
+				<div class="Social" align="center">
 
-		<ul><a href="https://www.facebook.com">
-				<img src="images/Facebook.jpg" width="30" height="30">
+					<ul><a href="https://www.facebook.com">
+							<img src="images/Facebook.jpg" width="30" height="30">
   </a><a href="https://www.instagram.com/?hl=pt">
-					<img src="images/Instagram.jpg" width="30" height="30">
+								<img src="images/Instagram.jpg" width="30" height="30">
   </a><a href="https://twitter.com/?lang=pt">
-						<img src="images/Twitter.jpg" width="30" height="30">
+									<img src="images/Twitter.jpg" width="30" height="30">
     </a>
-		</ul>
-	</div>
+					</ul>
+				</div>
 
 
-	<footer class="footer">
-		<div class="container">
-			<span class="text-muted">&copy; Rodolfo Souza 2020</span>
-		</div>
+				<footer class="footer">
+					<div class="container">
+						<span class="text-muted">&copy; Rodolfo Souza 2020</span>
+					</div>
 
-	</footer>
+				</footer>
 
-<script>
-
-let ticketslist = [];
+				<script>
+					let ticketslist = [];
  const getAll = () => {
     console.log("caling get all")
-    fetch('https://3000-b3a1ddd3-2e27-49b1-ae0c-3f2c64391be4.ws-eu01.gitpod.io/tickets')
+    fetch('https://3000-b3a1ddd3-2e27-49b1-ae0c-3f2c64391be4.ws-us02.gitpod.io/tickets')
     .then(res => res.json())
     .then(res => { 
         ticketlist = res;
@@ -148,19 +124,17 @@ let ticketslist = [];
 }
 
 getAll();
-</script>
+				</script>
 
-<script>
-
-function POST() {
-    console.log("here");
+				<script>
+					function POST() {
     const data = {
         name: document.getElementById("name").value,
         type: document.getElementById("type").value,
         avaliables: document.getElementById("avaliables").value,
         price: document.getElementById("price").value
     };
-    console.log(data);
+ 
   const options = { 
       method: 'POST', 
       headers: { 
@@ -168,18 +142,16 @@ function POST() {
     }, 
     body: JSON.stringify(data)
     };
-  fetch('https://3000-b3a1ddd3-2e27-49b1-ae0c-3f2c64391be4.ws-eu01.gitpod.io/tickets', options)
+  fetch('https://3000-b3a1ddd3-2e27-49b1-ae0c-3f2c64391be4.ws-us02.gitpod.io/tickets', options)
    .then(res => res.json())
     .then(res => { 
         ticketlist = res;
        location.reload(true);
     });
-}
-
-</script>
-<script>
-
-function UPDATE() {
+                    }
+				</script>
+				<script>
+					function UPDATE() {
     console.log("here");
     const data = {
         _id:  document.getElementById("id").value,  
@@ -190,13 +162,40 @@ function UPDATE() {
     };
     console.log(data);
   const options = { 
-      method: 'UPDATE', 
+      method: 'PUT', 
       headers: { 
           'Content-Type': 'application/json'
     }, 
     body: JSON.stringify(data)
     };
-  fetch('https://3000-b3a1ddd3-2e27-49b1-ae0c-3f2c64391be4.ws-eu01.gitpod.io/tickets/:'+ data._id , options)
+    var id = data._id;
+  fetch('https://3000-b3a1ddd3-2e27-49b1-ae0c-3f2c64391be4.ws-us02.gitpod.io/tickets/' + id, options)
+   .then(res => res.json())
+    .then(res => { 
+        ticketlist = res;
+       location.reload(true);
+        alert("Your table was update sucessfully");
+    });
+}
+
+				</script>
+
+				<script>
+					function DELETE() {
+    console.log("here");
+    const data = {
+        _id:  document.getElementById("id").value,  
+    };
+    console.log(data);
+  const options = { 
+      method: 'DELETE', 
+      headers: { 
+          'Content-Type': 'application/json'
+    }, 
+    body: JSON.stringify(data)
+    };
+    var id = data._id;
+  fetch('https://3000-b3a1ddd3-2e27-49b1-ae0c-3f2c64391be4.ws-us02.gitpod.io/tickets/' + id, options)
    .then(res => res.json())
     .then(res => { 
         ticketlist = res;
@@ -204,7 +203,7 @@ function UPDATE() {
     });
 }
 
-</script>
+				</script>
 
 
 </body>
