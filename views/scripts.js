@@ -13,7 +13,7 @@ function POST() {
     }, 
     body: JSON.stringify(data)
     };
-  fetch('https://3000-b3a1ddd3-2e27-49b1-ae0c-3f2c64391be4.ws-us02.gitpod.io/tickets', options)
+  fetch('https://3000-b3a1ddd3-2e27-49b1-ae0c-3f2c64391be4.ws-eu01.gitpod.io/tickets', options)
    .then(res => res.json())
     .then(res => { 
         ticketlist = res;
@@ -39,12 +39,13 @@ function POST() {
     body: JSON.stringify(data)
     };
     var id = data._id;
-  fetch('https://3000-b3a1ddd3-2e27-49b1-ae0c-3f2c64391be4.ws-us02.gitpod.io/tickets/' + id, options)
+  fetch('https://3000-b3a1ddd3-2e27-49b1-ae0c-3f2c64391be4.ws-eu01.gitpod.io/tickets/' + id, options)
    .then(res => res.json())
     .then(res => { 
         ticketlist = res;
+         alert("Your table was update sucessfully");
        location.reload(true);
-        alert("Your table was update sucessfully");
+       
     });
 }
 
@@ -62,7 +63,7 @@ function DELETE() {
     body: JSON.stringify(data)
     };
     var id = data._id;
-  fetch('https://3000-b3a1ddd3-2e27-49b1-ae0c-3f2c64391be4.ws-us02.gitpod.io/tickets/' + id, options)
+  fetch('https://3000-b3a1ddd3-2e27-49b1-ae0c-3f2c64391be4.ws-eu01.gitpod.io/tickets/' + id, options)
    .then(res => res.json())
     .then(res => { 
         ticketlist = res;
@@ -75,7 +76,8 @@ function DELETE() {
 let ticketslist = [];
  const getAll = () => {
     console.log("caling get all")
-    fetch('https://3000-b3a1ddd3-2e27-49b1-ae0c-3f2c64391be4.ws-us02.gitpod.io/tickets')
+    fetch('https://3000-b3a1ddd3-2e27-49b1-ae0c-3f2c64391be4.ws-eu01.gitpod.io/tickets')
+           
     .then(res => res.json())
     .then(res => { 
         ticketlist = res;
@@ -84,7 +86,7 @@ let ticketslist = [];
     });
  }
     const showTickets = () => {  
-    let tableRef = document.getElementById('table').getElementsByTagName('tbody')[0];
+    let tableRef = document.getElementById('tableOfTickets').getElementsByTagName('tbody')[0];
     
    for (var i = 0; i < ticketlist.length; i++){
     var newRow = tableRef.insertRow(tableRef.rows.length);
