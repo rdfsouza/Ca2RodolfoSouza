@@ -63,12 +63,16 @@ background-size: cover;
 }
 
 table{
-
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ float: center;
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 70%;
+  margin-left: 150px;
 }
-
+#form {
+float: center;
+margin-left: 180px;
+}
 table ,th{
 background:#B183D3;
  border: 1px solid black;
@@ -94,26 +98,23 @@ h2 {
 
 }
 
-.btn {
+#btn {
     border-radius: 0;
     -webkit-transition: all 0.3s;
        -moz-transition: all 0.3s;
             transition: all 0.3s;
 }
-.btn {
-    background: none;
+#btn {
+    background: #412B87;
     border: 3px solid #412B87;
-    color: #412B87;
+    color: #ffffff;
         width: 100px;
         height: 40px;
+        float: center;
 }
-.btn:hover,
-.btn:active {
-    color: #FFF;
-    background: #412B87;
-    border-color: #412B87:
+#p{
+    margin-left: 300px; float: center;
 }
-
 
 input[type=text] {
    border: 1px solid black;
