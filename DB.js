@@ -1,3 +1,5 @@
+//this class holds the connection with my database  
+
 const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
